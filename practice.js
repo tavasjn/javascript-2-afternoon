@@ -119,14 +119,19 @@ let methodCollection = {}
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
-methodCollection.alertHello = 'hello'
-methodCollection.logHello = alert(methodCollection.alertHello)
+methodCollection.alertHello = function(){
+  alert('hello');
+}
+methodCollection.logHello = function(){
+  console.log('hello');
+}
 
 /*
   Now call your alertHello and logHello methods.
 */
 
-//Code Here
+// console.log(alertHello);
+// console.log(logHello);
 
 ////////// PROBLEM 6 //////////
 
@@ -135,7 +140,13 @@ methodCollection.logHello = alert(methodCollection.alertHello)
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson(name, birthday, ssn){
+  let obj = {}
+  obj.name = name;
+  obj.birthday = birthday;
+  obj.ssn = ssn;
+  return obj;
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -144,4 +155,10 @@ methodCollection.logHello = alert(methodCollection.alertHello)
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expirationDate, securityCode,){
+  let creditCard = {}
+  creditCard.cardNumber = cardNumber;
+  creditCard.expirationDate = expirationDate;
+  creditCard.securityCode = securityCode;
+  return creditCard;
+}
